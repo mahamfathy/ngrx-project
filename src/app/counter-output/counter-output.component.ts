@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-counter-output',
@@ -7,6 +7,11 @@ import { Component } from '@angular/core';
   templateUrl: './counter-output.component.html',
   styleUrl: './counter-output.component.css'
 })
-export class CounterOutputComponent {
-
+export class CounterOutputComponent implements OnInit, OnDestroy{
+ngOnInit(): void {
+  
+}
+ngOnDestroy(): void {
+  
+}
 }
