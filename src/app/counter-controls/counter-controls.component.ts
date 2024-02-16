@@ -24,7 +24,7 @@ decrement(){
   // this.store.dispatch(new DecrementAction(2))
 }
 reset(){
-  this.store.dispatch(reset())
+  this.store.dispatch(reset({value:0}))
 
   // this.store.dispatch(new ResetAction(0))
 }

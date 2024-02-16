@@ -5,6 +5,7 @@ import {
   decrement,
   increment,
   reset,
+  set,
 } from './counter.actions';
 // import { decrement, increment, reset } from '../store/counter.actions';
 
@@ -13,7 +14,8 @@ export const countReducer = createReducer(
   initialState,
   on(increment, (state,action) => state + action.value),
   on(decrement, (state,action) => state - action.value),
-  on(reset, (state) => state = 0)
+  on(reset, (state) => state= 0),
+  on(set, (state,action)=> action.value)
 );
 
 // or I can use another way:
