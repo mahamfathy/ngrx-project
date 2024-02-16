@@ -23,7 +23,7 @@ export class CounterEffects {
   saveCount = createEffect(
     () =>
       this.actions$.pipe(
-        ofType(increment, decrement),
+        ofType(increment, decrement,reset),
         withLatestFrom(
           this.store.select(selectCount),
           this.store.select(selectDoubleCount)

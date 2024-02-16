@@ -12,10 +12,10 @@ import {
 const initialState = 0;
 export const countReducer = createReducer(
   initialState,
-  on(increment, (state,action) => state + action.value),
-  on(decrement, (state,action) => state - action.value),
-  on(reset, (state) => state= 0),
-  on(set, (state,action)=> action.value)
+  on(increment, (state, action) => state + action.value),
+  on(decrement, (state, action) => state - action.value),
+  on(reset, (state) => (state = 0)),
+  on(set, (state, action) => action.value)
 );
 
 // or I can use another way:
