@@ -1,5 +1,12 @@
-import { createReducer, on } from '@ngrx/store';
-import { decrement, increment, reset } from './counter.actions';
+import { Action, createReducer, on } from '@ngrx/store';
+import {
+  DecrementAction,
+  IncrementAction,
+  decrement,
+  increment,
+  reset,
+} from './counter.actions';
+// import { decrement, increment, reset } from '../store/counter.actions';
 
 const initialState = 0;
 // export const countReducer = createReducer(
@@ -10,16 +17,16 @@ const initialState = 0;
 // );
 
 // or I can use another way:
-export function countReducer(state = initialState, action: any) {
-  if (action.type === '[Counter] Increment') {
-    return state + action.value;
-  }else  if (action.type === '[Counter] Decrement') {
-    return state - action.value;
-    
-  } else if (action.type === '[Counter] Reset') {
-    return state = 0 ;
-    
-  } 
+export function countReducer(
+  state = initialState,
+  action: IncrementAction | Action
+) {
+  if (action.type === increment) {
+    return state + (<IncrementAction>action).value;
+  } else if (action.type === decrement) {
+    return state - (action as DecrementAction).value;
+  } else if (action.type === reset) {
+    return (state = 0);
+  }
   return state;
-    
 }
