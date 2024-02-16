@@ -8,5 +8,9 @@ import { provideEffects } from '@ngrx/effects';
 import { CounterEffects } from './effects/counter.effects';
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideRouter(routes), provideStore(reducers, { metaReducers: [] }), provideEffects([CounterEffects])],
+  providers: [
+    provideRouter(routes),
+    provideStore(reducers, { metaReducers: [] }),
+    provideEffects([CounterEffects]),
+  ],
 };
