@@ -12,10 +12,10 @@ import { decrement, increment, reset } from '../store/counter.actions';
 export class CounterControlsComponent {
   constructor(private store: Store) {}
 increment(){
-  this.store.dispatch(increment())
+  this.store.dispatch(increment({value:1}))
 }
 decrement(){
-  this.store.dispatch(decrement())
+  this.store.dispatch(decrement({value:2}))
 }
 reset(){
   this.store.dispatch(reset())
