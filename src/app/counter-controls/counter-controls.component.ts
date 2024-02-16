@@ -19,7 +19,7 @@ increment(){
   // this.store.dispatch(new IncrementAction(1))
 }
 decrement(){
-  this.store.dispatch(decrement({value:2}))
+  this.store.dispatch(decrement({value:1}))
 
   // this.store.dispatch(new DecrementAction(2))
 }
