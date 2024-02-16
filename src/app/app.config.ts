@@ -5,8 +5,8 @@ import { routes } from './app.routes';
 import { provideStore } from '@ngrx/store';
 import { reducers } from './reducers';
 import { provideEffects } from '@ngrx/effects';
-import { AppEffects } from './effects/app.effects';
+import { CounterEffects } from './effects/counter.effects';
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideRouter(routes), provideStore(reducers, { metaReducers: [] }), provideEffects(AppEffects)],
+  providers: [provideRouter(routes), provideStore(reducers, { metaReducers: [] }), provideEffects(CounterEffects)],
 };
