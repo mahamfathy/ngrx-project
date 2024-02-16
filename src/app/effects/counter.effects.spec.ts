@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 
 import { CounterEffects } from './counter.effects';
 
-describe('AppEffects', () => {
+describe('CounterEffects', () => {
   let actions$: Observable<any>;
   let effects: CounterEffects;
 
